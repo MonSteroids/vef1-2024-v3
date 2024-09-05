@@ -75,12 +75,12 @@ a {
 }
 
 /**
- * Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
- * Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
- * sem grunn og án breytinga.
- * Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
- * innan <body>.
- */
+* Eftirfarandi setur upp grunn umbrot (layout) síðu með flexbox.
+* Við förum yfir flexbox í viku 4 en þangað til er hægt að nota þetta
+* sem grunn og án breytinga.
+* Athugið að til þess að þetta virki þar að setja <div class="wrapper"> utan um allt efni 
+* innan <body>.
+*/
 .wrapper {
   display: flex;
   flex-direction: column;
@@ -99,16 +99,32 @@ a {
 /** Haus á síðum **/
 
 header {
-  /* TODO Skilgreina */
+  padding: 1rem;
+  text-align: center;
+  background-color: #cc99bb;
 }
 
 /** Valmynd **/
 
 nav {
-  /* TODO Skilgreina */
+  padding: 1rem;
+  background-color: #eebbdd;
+  border-bottom: 4px solid #cc99bb;
 }
 
-/* TODO Skilgreina aðra selectora fyrir valmynd */
+nav ul {
+  list-style: none;
+  text-align: center;
+}
+
+nav ul li {
+  display: inline-block;
+  margin-right: 1rem;
+}
+
+nav ul li:last-child {
+  margin-left: 0;
+}
 
 /** Meginmál og efni forsíðu **/
 
@@ -121,7 +137,8 @@ main {
 /** Fótur **/
 
 footer {
-  /* TODO Skilgreina */
+  background-color: #eebbdd;
+  border-top: 4px solid #cc99bb;
 }
 
 /* Ef við notum section fyrir hvert svæði undir fót, þá er hægt að nota eftirfarandi */
