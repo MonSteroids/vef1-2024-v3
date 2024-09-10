@@ -88,9 +88,9 @@ a {
 .wrapper {
   display: flex;
   flex-direction: column;
-  width: 100%;
+  margin: 0 auto;
+  /* max-width: 900px; */
   min-height: 100vh;
-
   background-color: #f3dd99;
 }
 
@@ -133,7 +133,40 @@ nav ul li:last-child {
 /** Meginmál og efni forsíðu **/
 
 main {
-  /* TODO Skilgreina */
+  padding: 2rem;
+  text-align: left;
+}
+
+/* Form á skráningar síðu */
+form section {
+  margin-bottom: 0.5rem;
+}
+
+form label {
+  display: block;
+}
+
+form input,
+form select,
+form textarea {
+  width: 300px;
+  padding: 0.5rem;
+  margin-bottom: 1rem;
+}
+
+form input[type="checkbox"] {
+  width: auto;
+  padding: 0;
+}
+
+button {
+  background-color: #eebbdd;
+  padding: 0.3rem 1rem;
+  border-radius: 5px;
+}
+
+button:hover {
+  background-color: #cc99bb;
 }
 
 /* TODO Skilgreina aðra selectora fyrir meginmál of forsíðu */
@@ -193,3 +226,6 @@ table {
 /** Skráningarform **/
 
 /* TODO Skilgreina */
+
+
+
