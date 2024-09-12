@@ -89,7 +89,6 @@ a {
   display: flex;
   flex-direction: column;
   margin: 0 auto;
-  /* max-width: 900px; */
   min-height: 100vh;
   background-color: #f3dd99;
 }
@@ -131,25 +130,52 @@ nav ul li:last-child {
 }
 
 /** Meginmál og efni forsíðu **/
+/* TODO Skilgreina aðra selectora fyrir meginmál of forsíðu */
 
 main {
   padding: 2rem;
   text-align: left;
+  max-width: 900px;
+  margin: 0 auto;
+  width: 100%;
 }
 
-/* Form á skráningar síðu */
+.img-spilabudin {
+  float: right;
+  width: 290px;
+  margin-left: 1rem;
+  margin-bottom: 1rem;
+}
+
+.img-spilabudin img {
+  border-radius: 10px;
+}
+
+.spilabud-selur-spil,
+.spil-text-index,
+.vidburdir-text-index {
+  margin-bottom: 1rem;
+  overflow: hidden;
+}
+
+/** Skráningarform **/
+/* TODO Skilgreina */
+form {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 1rem;
+}
+
 form section {
-  margin-bottom: 0.5rem;
-}
-
-form label {
-  display: block;
+  display: flex;
+  flex-direction: column;
 }
 
 form input,
 form select,
 form textarea {
   width: 300px;
+  max-width: 100%;
   padding: 0.5rem;
   margin-bottom: 1rem;
 }
@@ -169,9 +195,86 @@ button:hover {
   background-color: #cc99bb;
 }
 
-/* TODO Skilgreina aðra selectora fyrir meginmál of forsíðu */
+/** Spilasíða, töflustílar **/
+/* TODO Skilgreina aðra selectora fyrir töflu */
+
+table {
+  width: 100%;
+  margin-top: 1rem;
+  border-collapse: collapse;
+}
+
+table th {
+  background-color: #eebbdd;
+  padding: 1rem;
+  text-align: left;
+}
+
+table th:first-child {
+  color: transparent;
+}
+
+table td {
+  padding: 0.5rem;
+  vertical-align: middle;
+}
+
+/* Fékk hjálp frá ChatGPT hér með table */
+
+table tr:nth-child(even) {
+  background-color: #f3dd99;
+}
+
+table tr:nth-child(odd) {
+  background-color: #eebbdd;
+}
+
+table td img {
+  width: 500px;
+  height: auto;
+  border-radius: 5px;
+  display: block;
+  object-fit: cover;
+}
+
+table td:last-child{
+  white-space: nowrap;
+}
+
+/** Viðburðir **/
+/* TODO Skilgreina aðra selectora fyrir viðburði */
+
+.event {
+  margin-bottom: 2rem;
+}
+
+.event-content {
+  display: flex;
+  align-items: flex-start;
+  gap: 1rem;
+  margin-bottom: 1rem;
+}
+
+.event-img-container {
+  width: 300px;
+}
+
+.event-img-container img {
+  border-radius: 5px;
+}
+
+.event-text {
+  max-width: 600px;
+}
+
+.event-text a {
+  display: inline-block;
+  margin-top: 1rem;
+  text-decoration: underline;
+}
 
 /** Fótur **/
+/* TODO Skilgreina aðra selectora fyrir fót */
 
 footer {
   padding: 1rem;
@@ -204,28 +307,3 @@ footer dl dt {
 footer dl dd {
   margin-bottom: 1rem;
 }
-
-/* TODO Skilgreina aðra selectora fyrir fót */
-
-/** Spilasíða, töflustílar **/
-
-table {
-  /* TODO Skilgreina */
-}
-
-/* TODO Skilgreina aðra selectora fyrir töflu */
-
-/** Viðburðir **/
-
-.event {
-  /* TODO Skilgreina, gerum ráð fyrir að hver viðburður hafi eigin selector */
-}
-
-/* TODO Skilgreina aðra selectora fyrir viðburði */
-
-/** Skráningarform **/
-
-/* TODO Skilgreina */
-
-
-
